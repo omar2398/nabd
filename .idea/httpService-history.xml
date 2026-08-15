@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="HttpHistory">
+    <option name="httpHistories">
+      <map>
+        <entry key="0">
+          <value>
+            <ReqHistory>
+              <option name="body" value="{&#10;  &quot;name&quot;: &quot;Omar&quot;,&#10;  &quot;lastName&quot;: &quot;Mohamed&quot;,&#10;  &quot;email&quot;: &quot;omarsteven2398@gmail.com&quot;,&#10;  &quot;address&quot;: &quot;south sinai - tur sinai - badr distnict&quot;,&#10;  &quot;alerting&quot;: false,&#10;  &quot;energyAlertingThreshold&quot;: 0&#10;}" />
+              <option name="contentType" value="application/json" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="headers">
+                <map>
+                  <entry key="Content-Type" value="application/json" />
+                </map>
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="0" />
+              <option name="method" value="POST" />
+              <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Fri Aug 14 22:21:28 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
+              <option name="time" value="2026-08-14 22:21:29" />
+              <option name="uri" value="/api/v1/user" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="1">
+          <value>
+            <ReqHistory>
+              <option name="body" value="{&#10;  &quot;name&quot;: &quot;Omar&quot;,&#10;  &quot;lastName&quot;: &quot;Mohamed&quot;,&#10;  &quot;email&quot;: &quot;omarsteven2398@gmail.com&quot;,&#10;  &quot;address&quot;: &quot;south sinai - tur sinai - badr distnict&quot;,&#10;  &quot;alerting&quot;: false,&#10;  &quot;energyAlertingThreshold&quot;: 0&#10;}" />
+              <option name="contentType" value="application/json" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="headers">
+                <map>
+                  <entry key="Content-Type" value="application/json" />
+                </map>
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="1" />
+              <option name="method" value="POST" />
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-14 22:31:05" />
+              <option name="uri" value="/api/v1/user" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="2">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="2" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Sat Aug 15 03:12:28 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
+              <option name="time" value="2026-08-15 03:12:28" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="3">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="3" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Sat Aug 15 03:13:49 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
+              <option name="time" value="2026-08-15 03:13:49" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="4">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="4" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 03:14:55" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="5">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="5" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 03:16:39" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="6">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="6" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 03:16:46" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="7">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="7" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 03:16:47" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="8">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="8" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 03:16:47" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="9">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="9" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 03:17:40" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="10">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="10" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 03:31:24" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="11">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="11" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 03:34:30" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="12">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="12" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Sat Aug 15 03:35:05 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
+              <option name="time" value="2026-08-15 03:35:05" />
+              <option name="uri" value="/api/v1/user/3" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="13">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="13" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="0" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 03:35:27" />
+              <option name="uri" value="/api/v1/user/1" />
+            </ReqHistory>
+          </value>
+        </entry>
+        <entry key="14">
+          <value>
+            <ReqHistory>
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
+              <option name="fileNames">
+                <array />
+              </option>
+              <option name="headers">
+                <map />
+              </option>
+              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="id" value="14" />
+              <option name="method" value="GET" />
+              <option name="params">
+                <map>
+                  <entry key="id" value="1" />
+                </map>
+              </option>
+              <option name="res" value="{&quot;address&quot;:&quot;south sinai - tur sinai - badr distnict&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;omarsteven2398@gmail.com&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:1,&quot;lastName&quot;:&quot;Mohamed&quot;,&quot;name&quot;:&quot;Omar&quot;}" />
+              <option name="time" value="2026-08-15 22:17:51" />
+              <option name="uri" value="/api/v1/user/{id}" />
+            </ReqHistory>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

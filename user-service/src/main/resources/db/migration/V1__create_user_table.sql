@@ -1,0 +1,9 @@
+create table "user" (
+id BIGSERIAL PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+last_name VARCHAR(100),
+email VARCHAR(255) NOT NULL UNIQUE,
+address VARCHAR(500),
+alerting BOOLEAN NOT NULL DEFAULT FALSE,
+energy_alerting_threshold DOUBLE PRECISION NOT NULL DEFAULT 0.0
+);
