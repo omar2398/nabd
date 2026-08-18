@@ -9,7 +9,6 @@ services:
       - "5433:5432"
     volumes:
       - ./docker/postgres-data:/var/lib/postgresql/data
-
   kafka:
     container_name: kafka
     image: apache/kafka:latest
@@ -37,7 +36,7 @@ services:
       KAFKA_NUM_PARTITIONS: 3
       KAFKA_AUTO_CREATE_TOPIC_ENABLE: true
     volumes:
-      - ./docker/kafka_data:/var/lib/kafka/data
+      - ./docker/kafka-data:/var/lib/kafka/data
   kafka-ui:
     container_name: kafka-ui
     image: ghcr.io/kafbat/kafka-ui:latest
@@ -50,8 +49,17 @@ services:
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
       DYNAMIC_CONFIG_ENABLED: 'true'
     restart: unless-stopped
-
-volumes:
-  postgres-data:
-  kafka-data:
-
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    ports:
+      - "8072:8086"
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: admin
+      DOCKER_INFLUXDB_INIT_PASSWORD: omaradmin
+      DOCKER_INFLUXDB_INIT_ORG: nabd
+      DOCKER_INFLUXDB_INIT_BUCKET: energy_usage
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: my-most-secret-token:D
+    volumes:
+      - ./docker/influxd-data:/var/lib/influxdb2 #influxdb2 because its the convention since we are using version {2}.7 :D

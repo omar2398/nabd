@@ -21,11 +21,14 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 @Slf4j
 @Component
+/*
 @ConditionalOnProperty(
         name = "simulation.enable",
         havingValue = "true",
         matchIfMissing = false
 )
+*/
+
 public class ParallelDataSimulator implements CommandLineRunner {
 
   private final ExecutorService executorService;
