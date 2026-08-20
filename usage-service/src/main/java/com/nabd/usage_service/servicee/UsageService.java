@@ -6,6 +6,7 @@ import com.influxdb.client.domain.WritePrecision;
 import com.influxdb.client.write.Point;
 import com.influxdb.query.FluxRecord;
 import com.influxdb.query.FluxTable;
+import com.nabd.kafka.event.AlertingEvent;
 import com.nabd.kafka.event.EnergyUsageEvent;
 import com.nabd.usage_service.client.DeviceClient;
 import com.nabd.usage_service.client.UserClient;
@@ -15,6 +16,7 @@ import com.nabd.usage_service.dto.UserDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +33,7 @@ public class UsageService {
   private final InfluxDBClient influxDBClient;
   private final DeviceClient deviceClient;
   private final UserClient userClient;
+  private final KafkaTemplate<String, AlertingEvent> kafka;
 
   @Value("${influxdb.bucket}")
   private String influxBucket;
@@ -39,10 +42,14 @@ public class UsageService {
   private String influxOrg;
 
   public UsageService(
-      InfluxDBClient influxDBClient, DeviceClient deviceClient, UserClient userClient) {
+      InfluxDBClient influxDBClient,
+      DeviceClient deviceClient,
+      UserClient userClient,
+      KafkaTemplate kafka) {
     this.influxDBClient = influxDBClient;
     this.deviceClient = deviceClient;
     this.userClient = userClient;
+    this.kafka = kafka;
   }
 
   @KafkaListener(topics = "energy-usage", groupId = "usage-service")
@@ -57,7 +64,7 @@ public class UsageService {
     log.info("The record was stored into influxdb: {}", point.getFields());
   }
 
-  @Scheduled(cron = "*/10 * * * * *")
+  @Scheduled(cron = "*/10 * * * * *") // Actually this will be once per day, but this for the dev purposes.
   public void scheduledTask() {
     final Instant now = Instant.now();
     final Instant oneHourAgo = now.minusSeconds(3600);
@@ -124,7 +131,35 @@ public class UsageService {
         }
       }
       log.info("user threshold map: {}", userThresholdMap);
+      final List<Long> alertedUsers = new ArrayList<>(userThresholdMap.keySet());
+      for (final Long userId : alertedUsers) {
+        final Double threshold = userThresholdMap.get(userId);
+        final List<DeviceEnergy> devices = userDeviceEnergyMap.get(userId);
+        final Double totalConsumptionByUser =
+            devices.stream().mapToDouble(DeviceEnergy::getEnergyConsumed).sum();
+        if (totalConsumptionByUser > threshold) {
+          log.info(
+              "the user {} has exceed  the energy threshold with total consumption {}, since the threshold is {}",
+              userId,
+              totalConsumptionByUser,
+              threshold);
+          final AlertingEvent alertingEvent =
+              AlertingEvent.builder()
+                  .userId(userId)
+                  .message("Energy conumption threshold exceeded")
+                  .energyConsumed(totalConsumptionByUser)
+                  .threshold(threshold)
+                  .email(userEmailMap.get(userId))
+                  .build();
+          kafka.send("energy-alerts", alertingEvent);
+        } else {
+          log.info(
+              "User with id {} with the threshold {} hasn't exceed the threshold yet wwith {}",
+              userId,
+              threshold,
+              totalConsumptionByUser);
+        }
+      }
     }
-    // TODO: Calculate the total energy consumption for each user and after that I will send a kafka topic with alerted users  to the notification service
   }
 }
