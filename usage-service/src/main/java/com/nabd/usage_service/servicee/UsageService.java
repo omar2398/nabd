@@ -54,7 +54,7 @@ public class UsageService {
 
   @KafkaListener(topics = "energy-usage", groupId = "usage-service")
   public void energyUsageEvent(EnergyUsageEvent energyUsageEvent) {
-    log.info("Received energy usage event: {}", energyUsageEvent);
+    //log.info("Received energy usage event: {}", energyUsageEvent);
     Point point =
         Point.measurement("energy-usage")
             .addTag("deviceId", String.valueOf(energyUsageEvent.deviceId()))
@@ -66,6 +66,7 @@ public class UsageService {
 
   @Scheduled(cron = "*/10 * * * * *") // Actually this will be once per day, but this for the dev purposes.
   public void scheduledTask() {
+    log.info("Scheduled job has started");
     final Instant now = Instant.now();
     final Instant oneHourAgo = now.minusSeconds(3600);
 
@@ -84,6 +85,7 @@ public class UsageService {
     QueryApi queryApi = influxDBClient.getQueryApi();
     List<FluxTable> tables = queryApi.query(fluxQuery, influxOrg);
     List<DeviceEnergy> deviceEnergies = new ArrayList<>();
+    log.info("the deviceEnergies are {}", deviceEnergies);
 
     for (FluxTable table : tables) {
       for (FluxRecord record : table.getRecords()) {
