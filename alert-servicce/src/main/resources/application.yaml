@@ -12,12 +12,25 @@ spring:
   application:
     name: alert-service
   kafka:
+    bootstrap-servers:
+      - localhost:9094
     consumer:
       group-id: alert-service
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: com.nabd.kafka.event
+  mail:
+    port: 1025
+    host: localhost
+    properties:
+      mail:
+        smtp:
+          auth: false
+        starttls.enable: false
+
+message:
+  from: noreply@nabd.com
 
 server:
   port: 8084

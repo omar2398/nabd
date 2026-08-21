@@ -63,3 +63,11 @@ services:
       DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: my-most-secret-token:D
     volumes:
       - ./docker/influxd-data:/var/lib/influxdb2 #influxdb2 because its the convention since we are using version {2}.7 :D
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: mailpit
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    restart: unless-stopped
+

@@ -19,9 +19,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="0" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:26,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:8}" />
               <option name="time" value="2026-08-17 20:11:07" />
               <option name="uri" value="" />
@@ -44,9 +41,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="1" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:27,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:8}" />
               <option name="time" value="2026-08-17 20:11:10" />
               <option name="uri" value="" />
@@ -69,9 +63,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="2" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:28,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:8}" />
               <option name="time" value="2026-08-17 20:11:12" />
               <option name="uri" value="" />
@@ -94,9 +85,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="3" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:29,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:12}" />
               <option name="time" value="2026-08-17 20:11:18" />
               <option name="uri" value="" />
@@ -119,9 +107,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="4" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 20:11:21 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
               <option name="time" value="2026-08-17 20:11:21" />
               <option name="uri" value="" />
@@ -144,9 +129,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="5" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:31,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:12}" />
               <option name="time" value="2026-08-17 20:11:58" />
               <option name="uri" value="" />
@@ -156,24 +138,22 @@
         <entry key="6">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;deviceId&quot;: 1,&#10;  &quot;energyConsumed&quot;: 20.0,&#10;  &quot;timestamp&quot;: {&#10;    &quot;seconds&quot;: 13,&#10;    &quot;nanos&quot;: 0&#10;  }&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8082/api/v1/ingestion" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="6" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 19:35:30 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Bad Request, status=400).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
-              <option name="time" value="2026-08-17 19:35:30" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:16:56" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -181,24 +161,22 @@
         <entry key="7">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;deviceId&quot;: 1,&#10;  &quot;energyConsumed&quot;: 20.0,&#10;  &quot;timestamp&quot;: &quot;2026-08-17T16:00:13Z&quot;&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8082/api/v1/ingestion" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="7" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 19:36:04 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
-              <option name="time" value="2026-08-17 19:36:04" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:19:29" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -206,24 +184,22 @@
         <entry key="8">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;deviceId&quot;: 1,&#10;  &quot;energyConsumed&quot;: 20.0,&#10;  &quot;timestamp&quot;: &quot;2026-08-17T16:00:13Z&quot;&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8082/api/v1/ingestion" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="8" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="" />
-              <option name="time" value="2026-08-17 19:37:46" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:22:20" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -231,49 +207,45 @@
         <entry key="9">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 0&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8080" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="9" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 20:09:20 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Not Found, status=404).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
-              <option name="time" value="2026-08-17 20:09:20" />
-              <option name="uri" value="/api/v1/device" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:22:25" />
+              <option name="uri" value="" />
             </ReqHistory>
           </value>
         </entry>
         <entry key="10">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 0&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="10" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 20:09:27 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
-              <option name="time" value="2026-08-17 20:09:27" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:22:26" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -281,24 +253,22 @@
         <entry key="11">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="11" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:3,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:38" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:22:27" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -306,24 +276,22 @@
         <entry key="12">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="12" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:4,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:39" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:22:28" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -331,24 +299,22 @@
         <entry key="13">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="13" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:5,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:39" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:22:28" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -356,24 +322,22 @@
         <entry key="14">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="14" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:6,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:39" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:24:48" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -381,24 +345,22 @@
         <entry key="15">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="15" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:7,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:40" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:26:30" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -406,24 +368,22 @@
         <entry key="16">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="16" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:8,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:40" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:26:38" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -431,24 +391,22 @@
         <entry key="17">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="17" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:9,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:40" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:27:58" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -456,24 +414,22 @@
         <entry key="18">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="18" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:10,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:40" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:33:43" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -481,24 +437,22 @@
         <entry key="19">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="19" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:11,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:41" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:34:58" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -506,24 +460,22 @@
         <entry key="20">
           <value>
             <ReqHistory>
-              <option name="body" value="{&#10;  &quot;name&quot;: &quot;TEST&quot;,&#10;  &quot;location&quot;: &quot;TEST&quot;,&#10;  &quot;type&quot;: &quot;SPEAKER&quot;,&#10;  &quot;userId&quot;: 1&#10;}" />
-              <option name="contentType" value="application/json" />
+              <option name="body" value="" />
+              <option name="contentType" value="application/x-www-form-urlencoded" />
               <option name="fileNames">
                 <array />
               </option>
               <option name="headers">
-                <map>
-                  <entry key="Content-Type" value="application/json" />
-                </map>
+                <map />
               </option>
-              <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
+              <option name="host" value="http://127.0.0.1:8083/api/v1/usage" />
               <option name="id" value="20" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="params">
                 <map />
               </option>
-              <option name="res" value="{&quot;id&quot;:12,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
-              <option name="time" value="2026-08-17 20:09:41" />
+              <option name="res" value="Kafka message has been created" />
+              <option name="time" value="2026-08-21 17:36:58" />
               <option name="uri" value="" />
             </ReqHistory>
           </value>
@@ -544,9 +496,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="21" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:13,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
               <option name="time" value="2026-08-17 20:09:41" />
               <option name="uri" value="" />
@@ -569,9 +518,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="22" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:14,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
               <option name="time" value="2026-08-17 20:09:41" />
               <option name="uri" value="" />
@@ -594,9 +540,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="23" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:15,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
               <option name="time" value="2026-08-17 20:09:41" />
               <option name="uri" value="" />
@@ -619,9 +562,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="24" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:16,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
               <option name="time" value="2026-08-17 20:09:41" />
               <option name="uri" value="" />
@@ -644,9 +584,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="25" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:17,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
               <option name="time" value="2026-08-17 20:09:41" />
               <option name="uri" value="" />
@@ -669,9 +606,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="26" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:18,&quot;name&quot;:&quot;TEST&quot;,&quot;location&quot;:&quot;TEST&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:1}" />
               <option name="time" value="2026-08-17 20:09:42" />
               <option name="uri" value="" />
@@ -694,9 +628,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="27" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;asdfasdf&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:2,&quot;lastName&quot;:&quot;asdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:09:53" />
               <option name="uri" value="/api/v1/user" />
@@ -719,9 +650,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="28" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 20:09:54 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
               <option name="time" value="2026-08-17 20:09:54" />
               <option name="uri" value="/api/v1/user" />
@@ -744,9 +672,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="29" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 20:09:54 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
               <option name="time" value="2026-08-17 20:09:54" />
               <option name="uri" value="/api/v1/user" />
@@ -769,9 +694,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="30" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 20:09:54 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
               <option name="time" value="2026-08-17 20:09:54" />
               <option name="uri" value="/api/v1/user" />
@@ -794,9 +716,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="31" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 20:09:54 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
               <option name="time" value="2026-08-17 20:09:54" />
               <option name="uri" value="/api/v1/user" />
@@ -819,9 +738,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="32" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;asdfasdasdff&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:3,&quot;lastName&quot;:&quot;asdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:00" />
               <option name="uri" value="/api/v1/user" />
@@ -844,9 +760,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="33" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;asdfasdasdaaasdff&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:4,&quot;lastName&quot;:&quot;asasdfasdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:04" />
               <option name="uri" value="/api/v1/user" />
@@ -869,9 +782,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="34" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;asdfaasdfsdasdaaasdff&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:5,&quot;lastName&quot;:&quot;asasdfasdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:06" />
               <option name="uri" value="/api/v1/user" />
@@ -894,9 +804,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="35" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;asdfasdfaasdfsdasdaaasdff&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:6,&quot;lastName&quot;:&quot;asasdfasdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:09" />
               <option name="uri" value="/api/v1/user" />
@@ -919,9 +826,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="36" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;asdfaasdfaasdfsdasdaaasdff&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:7,&quot;lastName&quot;:&quot;asasdfasdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:11" />
               <option name="uri" value="/api/v1/user" />
@@ -944,9 +848,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="37" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;fsdasdaaasdff&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:8,&quot;lastName&quot;:&quot;asasdfasdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:16" />
               <option name="uri" value="/api/v1/user" />
@@ -969,9 +870,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="38" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;fsdaf&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:9,&quot;lastName&quot;:&quot;asasdfasdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:20" />
               <option name="uri" value="/api/v1/user" />
@@ -994,9 +892,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="39" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 20:10:22 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Internal Server Error, status=500).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
               <option name="time" value="2026-08-17 20:10:22" />
               <option name="uri" value="/api/v1/user" />
@@ -1019,9 +914,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="40" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;fsddaf&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:10,&quot;lastName&quot;:&quot;asasdfasdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:25" />
               <option name="uri" value="/api/v1/user" />
@@ -1044,9 +936,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="41" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;fsddasf&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:11,&quot;lastName&quot;:&quot;asasdfasdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:29" />
               <option name="uri" value="/api/v1/user" />
@@ -1069,9 +958,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="42" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;address&quot;:&quot;asdfasdf&quot;,&quot;alerting&quot;:false,&quot;email&quot;:&quot;faasf&quot;,&quot;energyAlertingThreshold&quot;:0.0,&quot;id&quot;:12,&quot;lastName&quot;:&quot;asasdfasdfa&quot;,&quot;name&quot;:&quot;asdf&quot;}" />
               <option name="time" value="2026-08-17 20:10:32" />
               <option name="uri" value="/api/v1/user" />
@@ -1094,9 +980,6 @@
               <option name="host" value="http://127.0.0.1:8080" />
               <option name="id" value="43" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id='created'&gt;Mon Aug 17 20:10:39 EEST 2026&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Not Found, status=404).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" />
               <option name="time" value="2026-08-17 20:10:39" />
               <option name="uri" value="/api/v1/device" />
@@ -1119,9 +1002,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="44" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:19,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:2}" />
               <option name="time" value="2026-08-17 20:10:46" />
               <option name="uri" value="" />
@@ -1144,9 +1024,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="45" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:20,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:3}" />
               <option name="time" value="2026-08-17 20:10:49" />
               <option name="uri" value="" />
@@ -1169,9 +1046,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="46" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:21,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:3}" />
               <option name="time" value="2026-08-17 20:10:51" />
               <option name="uri" value="" />
@@ -1194,9 +1068,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="47" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:22,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:3}" />
               <option name="time" value="2026-08-17 20:10:53" />
               <option name="uri" value="" />
@@ -1219,9 +1090,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="48" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:23,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:3}" />
               <option name="time" value="2026-08-17 20:10:56" />
               <option name="uri" value="" />
@@ -1244,9 +1112,6 @@
               <option name="host" value="http://127.0.0.1:8081/api/v1/device" />
               <option name="id" value="49" />
               <option name="method" value="POST" />
-              <option name="params">
-                <map />
-              </option>
               <option name="res" value="{&quot;id&quot;:24,&quot;name&quot;:&quot;asdfasd&quot;,&quot;location&quot;:&quot;asdf&quot;,&quot;type&quot;:&quot;SPEAKER&quot;,&quot;userId&quot;:3}" />
               <option name="time" value="2026-08-17 20:11:01" />
               <option name="uri" value="" />
@@ -1257,8 +1122,8 @@
     </option>
     <option name="point">
       <AtomicInteger>
-        <option name="opaque" value="6" />
-        <option name="plain" value="6" />
+        <option name="opaque" value="21" />
+        <option name="plain" value="21" />
       </AtomicInteger>
     </option>
   </component>
