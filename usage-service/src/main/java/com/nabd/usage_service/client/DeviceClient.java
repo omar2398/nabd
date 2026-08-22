@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.List;
+
 @Component
 public class DeviceClient {
   private final RestTemplate template;
@@ -21,7 +23,17 @@ public class DeviceClient {
     String url = String.format("%s/%d", baseUrl, id);
     String newUrlApproach =
         UriComponentsBuilder.fromUriString(url).path("/{id}").buildAndExpand(id).toUriString();
-    //The second one is more suites, actually i didn't use before but copilot suggested it to me.
+    // The second one is more suites, actually i didn't use before but copilot suggested it to me.
     return template.getForObject(newUrlApproach, DeviceDto.class);
+  }
+
+  public List<DeviceDto> getAllDevicesByUser(Long userId) {
+    String url =
+        UriComponentsBuilder.fromUriString(baseUrl)
+            .path("/user/{userId}")
+            .buildAndExpand(userId)
+            .toUriString();
+    ResponseEntity<DeviceDto[]> response = template.getForEntity(url, DeviceDto[].class);
+    return response.getBody() == null ? List.of() : List.of(response.getBody());
   }
 }

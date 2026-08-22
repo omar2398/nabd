@@ -1,4 +1,4 @@
-package com.nabd.usage_service.dto;
+package com.nabd.insight_service.dto;
 
 import lombok.Builder;
 
@@ -6,8 +6,7 @@ import lombok.Builder;
 public record DeviceDto(
         Long id,
         String name,
-        String location,
         String type,
-        Long userId,
+        String location,
         double energyConsumed
 ) {}

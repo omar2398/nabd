@@ -12,6 +12,7 @@ import com.nabd.usage_service.client.DeviceClient;
 import com.nabd.usage_service.client.UserClient;
 import com.nabd.usage_service.dto.DeviceDto;
 import com.nabd.usage_service.dto.DeviceEnergy;
+import com.nabd.usage_service.dto.UsageDto;
 import com.nabd.usage_service.dto.UserDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -54,7 +55,7 @@ public class UsageService {
 
   @KafkaListener(topics = "energy-usage", groupId = "usage-service")
   public void energyUsageEvent(EnergyUsageEvent energyUsageEvent) {
-    //log.info("Received energy usage event: {}", energyUsageEvent);
+    // log.info("Received energy usage event: {}", energyUsageEvent);
     Point point =
         Point.measurement("energy-usage")
             .addTag("deviceId", String.valueOf(energyUsageEvent.deviceId()))
@@ -64,7 +65,8 @@ public class UsageService {
     log.info("The record was stored into influxdb: {}", point.getFields());
   }
 
-  @Scheduled(cron = "*/10 * * * * *") // Actually this will be once per day, but this for the dev purposes.
+  @Scheduled(
+      cron = "*/10 * * * * *") // Actually this will be once per day, but this for the dev purposes.
   public void scheduledTask() {
     log.info("Scheduled job has started");
     final Instant now = Instant.now();
@@ -163,5 +165,51 @@ public class UsageService {
         }
       }
     }
+  }
+
+  public UsageDto getOverview(Long userId, int days) {
+    log.info("Get the usage for userid {} over past {} days", userId, days);
+
+    final var devices = deviceClient.getAllDevicesByUser(userId);
+
+    if (devices == null || devices.isEmpty()) {
+      return UsageDto.builder()
+              .userId(userId)
+              .devices(List.of())
+              .build();
+    }
+
+    List<String> deviceIds = devices.stream()
+            .map(d -> d.id().toString())
+            .toList();
+
+    final Instant now = Instant.now();
+    final Instant start = now.minusSeconds((long) days * 24 * 3600);
+
+    String deviceFilter = deviceIds.stream()
+            .map(id -> "\"" + id + "\"")
+            .collect(Collectors.joining(", "));
+
+    String fluxQuery =
+            String.format(
+                    """
+                    from(bucket: "%s")
+                      |> range(start: time(v: "%s"), stop: time(v: "%s"))
+                      |> filter(fn: (r) => r["_measurement"] == "energy-usage")
+                      |> filter(fn: (r) => r["_field"] == "energyConsumed")
+                      |> filter(fn: (r) => contains(value: r["deviceId"], set: [%s]))
+                      |> group(columns: ["deviceId"])
+                      |> sum(column: "_value")
+                    """,
+                    influxBucket,
+                    start,
+                    now,
+                    deviceFilter);
+
+    log.info("Flux query: {}", fluxQuery);
+
+    QueryApi queryApi = influxDBClient.getQueryApi();
+    List<FluxTable> tables = queryApi.query(fluxQuery, influxOrg);
+
   }
 }
