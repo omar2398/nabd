@@ -169,27 +169,22 @@ public class UsageService {
 
   public UsageDto getOverview(Long userId, int days) {
     log.info("Get the usage for userid {} over past {} days", userId, days);
-
     final var devices = deviceClient.getAllDevicesByUser(userId);
-
     if (devices == null || devices.isEmpty()) {
       return UsageDto.builder()
               .userId(userId)
               .devices(List.of())
               .build();
     }
-
     List<String> deviceIds = devices.stream()
             .map(d -> d.id().toString())
             .toList();
 
     final Instant now = Instant.now();
     final Instant start = now.minusSeconds((long) days * 24 * 3600);
-
     String deviceFilter = deviceIds.stream()
             .map(id -> "\"" + id + "\"")
             .collect(Collectors.joining(", "));
-
     String fluxQuery =
             String.format(
                     """
@@ -205,11 +200,44 @@ public class UsageService {
                     start,
                     now,
                     deviceFilter);
-
     log.info("Flux query: {}", fluxQuery);
-
+    final Map<Long, Double> aggregatedMap = new HashMap<>();
     QueryApi queryApi = influxDBClient.getQueryApi();
     List<FluxTable> tables = queryApi.query(fluxQuery, influxOrg);
+    for (FluxTable table : tables) {
+      for (FluxRecord record : table.getRecords()) {
+        Object deviceIdValue = record.getValueByKey("deviceId");
+        Object energyValue = record.getValueByKey("_value");
 
+        if (deviceIdValue == null) {
+          continue;
+        }
+
+        Long deviceId = Long.valueOf(deviceIdValue.toString());
+
+        Double energyConsumed =
+                energyValue instanceof Number
+                        ? ((Number) energyValue).doubleValue()
+                        : 0.0;
+
+        aggregatedMap.put(deviceId, energyConsumed);
+      }
+    }
+
+    log.info("Aggregated energy consumption: {}", aggregatedMap);
+
+    List<DeviceEnergy> deviceEnergies = devices.stream()
+            .map(device -> DeviceEnergy.builder()
+                    .deviceId(device.id())
+                    .userId(userId)
+                    .energyConsumed(
+                            aggregatedMap.getOrDefault(device.id(), 0.0))
+                    .build())
+            .toList();
+
+    return UsageDto.builder()
+            .userId(userId)
+            .devices(devices)
+            .build();
   }
 }

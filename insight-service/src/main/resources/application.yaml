@@ -1,4 +1,11 @@
 spring:
+  ai:
+    ollama:
+      init:
+        pull-model-strategy: NEVER
+      chat:
+        options:
+          model: deepseek-coder
   application:
     name: insight-service
 
@@ -8,3 +15,5 @@ usage:
 
 server:
   port: 8085
+
+
