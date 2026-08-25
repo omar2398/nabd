@@ -1,0 +1,109 @@
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: user-service
+              uri: http://localhost:8080
+              predicates:
+                - Path=/api/v1/user/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    id: userServiceCB
+                    fallbackUri: forward:/fallback/default
+
+            - id: device-service
+              uri: http://localhost:8081
+              predicates:
+                - Path=/api/v1/device/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    id: deviceServiceCB
+                    fallbackUri: forward:/fallback/default
+
+            - id: ingestion-service
+              uri: http://localhost:8082
+              predicates:
+                - Path=/api/v1/ingestion/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    id: ingestionServiceCB
+                    fallbackUri: forward:/fallback/default
+
+            - id: usage-service
+              uri: http://localhost:8083
+              predicates:
+                - Path=/api/v1/usage/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    id: usageServiceCB
+                    fallbackUri: forward:/fallback/default
+
+            - id: alert-service
+              uri: http://localhost:8084
+              predicates:
+                - Path=/api/v1/alert/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    id: alertServiceCB
+                    fallbackUri: forward:/fallback/default
+
+            - id: insight-service
+              uri: http://localhost:8085
+              predicates:
+                - Path=/api/v1/insight/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    id: insightServiceCB
+                    fallbackUri: forward:/fallback/default
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 30s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+
+    instances:
+      userServiceCB:
+        baseConfig: default
+
+      deviceServiceCB:
+        baseConfig: default
+
+      ingestionServiceCB:
+        baseConfig: default
+
+      usageServiceCB:
+        baseConfig: default
+
+      alertServiceCB:
+        baseConfig: default
+
+      insightServiceCB:
+        baseConfig: default
+
+server:
+  port: 9000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - circuitbreakers
