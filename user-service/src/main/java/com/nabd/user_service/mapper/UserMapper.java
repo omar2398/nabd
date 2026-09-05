@@ -15,6 +15,7 @@ public class UserMapper {
         .energyAlertingThreshold(requestDto.getEnergyAlertingThreshold())
         .lastName(requestDto.getLastName())
         .name(requestDto.getName())
+        .password(requestDto.getPassword())
         .build();
   }
 

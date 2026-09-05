@@ -20,4 +20,7 @@ public class User {
     private String address;
     private boolean alerting;
     private double energyAlertingThreshold;
+    private String password;
+    @Builder.Default
+    private String role = "USER";
 }
