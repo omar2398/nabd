@@ -10,4 +10,5 @@ public class UserRequestDto {
     private String address;
     private boolean alerting;
     private double energyAlertingThreshold;
+    private String password;
 }

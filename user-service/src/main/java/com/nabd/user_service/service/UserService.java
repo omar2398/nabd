@@ -6,12 +6,9 @@ import com.nabd.user_service.exception.UserAlreadyExistException;
 import com.nabd.user_service.exception.UserNotFoundException;
 import com.nabd.user_service.mapper.UserMapper;
 import com.nabd.user_service.repository.UserRepository;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jspecify.annotations.Nullable;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -20,6 +17,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
   private final UserRepository repo;
   private final UserMapper mapper;
+  private final PasswordEncoder passwordEncoder;
 
   public UserResponseDto createUser(UserRequestDto request) {
     log.info("creating the user: {}", request);
@@ -27,6 +25,7 @@ public class UserService {
       log.error("user email is already found {}", request.getEmail());
       throw new UserAlreadyExistException("User with this email is already exists");
     }
+    request.setPassword(passwordEncoder.encode(request.getPassword()));
     var createdUser = repo.save(mapper.toEntity(request));
     log.info("user created{}", createdUser);
     return mapper.toDto(createdUser);
